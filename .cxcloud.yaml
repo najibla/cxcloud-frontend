@@ -1,0 +1,11 @@
+deployment:
+  name: $APP_NAME
+  image:
+    name: $APP_NAME
+    repository: 033155846522.dkr.ecr.eu-west-1.amazonaws.com/najibb.k8s.local
+    version: $APP_VERSION
+  containerPort: 80
+  replicas: 2
+  env:
+    - name: NODE_ENV
+      value: production
